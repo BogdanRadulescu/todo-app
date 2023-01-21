@@ -1,0 +1,28 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd app && npm start",
+    "lint": "cd app && npx eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BogdanRadulescu/todo-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BogdanRadulescu/todo-app/issues"
+  },
+  "homepage": "https://github.com/BogdanRadulescu/todo-app#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "@typescript-eslint/parser": "^5.48.2",
+    "concurrently": "^7.6.0",
+    "eslint": "^8.32.0",
+    "typescript": "^4.9.4"
+  }
+}
