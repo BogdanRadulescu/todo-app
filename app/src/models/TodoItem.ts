@@ -3,12 +3,12 @@ import TodoState from './TodoState';
 
 class TodoItem 
 {
-    public state: string;
+    public state: TodoState;
     public description: string;
     public owner: string;
     public id: string;
 
-    constructor(description: string, state: string = TodoState.TODO, owner: string = '', id: string = uuid())
+    constructor(description: string, state: TodoState = TodoState.TODO, owner: string = '', id: string = uuid())
     {
         this.state = state;
         this.description = description;

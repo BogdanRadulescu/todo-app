@@ -1,4 +1,5 @@
 import TodoItem from "./models/TodoItem";
+import TodoState, { NextState, PrevState } from "./models/TodoState";
 
 class TodoService
 {
@@ -34,6 +35,28 @@ class TodoService
     public GetAll()
     {
         return this.todoList;
+    }
+
+    public MoveAcross(id: string)
+    {
+        const card = this.todoList.find(x => x.id == id);
+        if (!card)
+        {
+            throw new Error("Not Found");
+        }
+        card.state = NextState(card.state);
+        return card.state;
+    }
+
+    public MovePrevious(id: string): TodoState
+    {
+        const card = this.todoList.find(x => x.id == id);
+        if (!card)
+        {
+            throw new Error("Not Found");
+        }
+        card.state = PrevState(card.state);
+        return card.state;
     }
 }
 
